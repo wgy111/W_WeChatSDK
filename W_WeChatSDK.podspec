@@ -9,18 +9,35 @@
 Pod::Spec.new do |s|
 
     s.name         = "W_WeChatSDK"
-    s.version      = "0.0.1"
+    s.version      = "1.0.0"
     s.summary      = "微信官方SDK"
+
     s.description  = <<-DESC
-                微信官方SDK1.7.7 方便使用
-                DESC
-    s.license      = { :type => "MIT", :file => "LICENSE" }
+            微信官方SDK 1.7.7 , 方便使用
+        DESC
+
     s.homepage     = "https://github.com/wgy111/W_WeChatSDK"
-    s.author       = { "yao" => "798169202@qq.com" }
-    s.source       = { :git => "https://github.com/wgy111/W_WeChatSDK.git",:tag => s.version }
-    s.source_files = 'W_WeChatSDK/**/*.h'
+
+    s.license      = "MIT"
+    # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+
+    s.author             = { "yao" => "798169202@qq.com" }
+    s.platform     = :ios, "7.0"
+    s.ios.deployment_target = "7.0"
+
+    s.source       = { :git => "https://github.com/wgy111/W_WeChatSDK.git", :tag => "#{s.version}" }
+
+    s.source_files  =  "W_WeChatSDK/**/*.h"
+    s.public_header_files = "W_WeChatSDK/**/*.h"
+
     s.preserve_paths = "W_WeChatSDK/*.a"
-    s.library   = 'W_WeChatSDK'
+
+    s.frameworks = "UIKit", "Foundation" , "CoreTelephony", "SystemConfiguration", "CFNetwork", "Social"
+
+#s.library   = "W_WeChatSDK"
+
+    s.requires_arc = true
+
     s.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/W_WeChatSDK/W_WeChatSDK"'}
 
 end
