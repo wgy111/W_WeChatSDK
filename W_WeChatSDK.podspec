@@ -9,11 +9,15 @@
 Pod::Spec.new do |s|
 
     s.name         = "W_WeChatSDK"
-    s.version      = "1.7.7"
+    s.version      = "0.0.1"
     s.summary      = "微信官方SDK"
+    s.description  = <<-DESC
+                微信官方SDK1.7.7 方便使用
+                DESC
+    s.license      = { :type => "MIT", :file => "LICENSE" }
     s.homepage     = "https://github.com/wgy111/W_WeChatSDK"
     s.author       = { "yao" => "798169202@qq.com" }
-    s.source       = { :git => "https://github.com/wgy111/W_WeChatSDK.git"}
+    s.source       = { :git => "https://github.com/wgy111/W_WeChatSDK.git",:tag => s.version }
     s.source_files = 'W_WeChatSDK/**/*.h'
     s.preserve_paths = "W_WeChatSDK/*.a"
     s.library   = 'W_WeChatSDK'
